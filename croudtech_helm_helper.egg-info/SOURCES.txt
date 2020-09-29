@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+aws_resource_inventory/__init__.py
+aws_resource_inventory/cli.py
+croudtech_helm_helper.egg-info/PKG-INFO
+croudtech_helm_helper.egg-info/SOURCES.txt
+croudtech_helm_helper.egg-info/dependency_links.txt
+croudtech_helm_helper.egg-info/entry_points.txt
+croudtech_helm_helper.egg-info/requires.txt
+croudtech_helm_helper.egg-info/top_level.txt

@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pipenv-setup = "*"
+
+[packages]
+boto3 = "*"
+click = "*"
+pyyaml = "*"
+inflection = "*"
+dotty-dict = "*"
+jmespath = "*"
+backoff = "*"
+
+[requires]
+python_version = "3.8"

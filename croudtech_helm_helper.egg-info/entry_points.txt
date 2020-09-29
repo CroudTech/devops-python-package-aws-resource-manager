@@ -1,0 +1,3 @@
+[console_scripts]
+aws-resource-inventory = aws_resource_inventory.cli:cli
+
