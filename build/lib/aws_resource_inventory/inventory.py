@@ -72,7 +72,7 @@ class Service:
             ConnectTimeoutError,
             SSLError,
         ) as Exp:
-            self.output.echo(self.output.style(Exp, fg="red"))
+            self.output.echo(self.output.style(str(Exp), fg="red"))
         return {}
 
     @backoff.on_exception(

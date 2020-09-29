@@ -2,6 +2,7 @@ import click
 import yaml
 from .inventory import Inventory
 import os
+import boto3
 
 
 @click.group()
@@ -23,6 +24,15 @@ def get_inventory(config, output_file):
     inv = Inventory(config=config_data, output_file=output_file, output=click)
     inv.get_inventory()
 
+@cli.command()
+@click.argument('bucket', required=True)
+@click.option('--yes/--no', required=True)
+def delete_bucket(bucket, yes):
+    s3 = boto3.resource('s3')
+    bucket_obj = s3.Bucket(bucket)
+    bucket_obj.object_versions.delete()
+    if yes:
+        bucket_obj.delete()
 
 if __name__ == "__main__":
     cli()
