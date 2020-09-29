@@ -19,7 +19,7 @@ setup(
         "six==1.15.0; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
         "urllib3==1.25.10; python_version != '3.4'",
     ],
-    name="croudtech-helm-helper",  # Replace with your own username
+    name="aws-resource-inventory",  # Replace with your own username
     version="0.0.1",
     author="Jim Robinson",
     author_email="jscrobinson@gmail.com",
