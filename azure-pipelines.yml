@@ -23,4 +23,20 @@ steps:
     python -m pip install --upgrade pip
     pip install -r requirements.txt
   displayName: 'Install dependencies'
-
+- task: BuildSDist@1
+  inputs:
+    setuppy: 'setup.py'
+    outputdir: '$(Build.ArtifactStagingDirectory)'
+- task: BuildWheel@1
+  inputs:
+    setuppy: 'setup.py'
+- task: GitHubRelease@1
+  condition: and(contains(variables['build.sourceBranch'], 'refs/heads/master'), succeeded())
+  inputs:
+    gitHubConnection: 'GitHubCroudControl'
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'gitTag'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
