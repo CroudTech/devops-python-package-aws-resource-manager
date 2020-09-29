@@ -27,3 +27,6 @@ steps:
   inputs:
     setuppy: 'setup.py'
     outputdir: '$(Build.ArtifactStagingDirectory)'
+- task: BuildWheel@1
+  inputs:
+    setuppy: 'setup.py'
