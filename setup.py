@@ -27,7 +27,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/CroudTech/devops-python-package-aws-resource-manager",
-    packages=["aws_resource_inventory", "aws_resource_inventory"],
+    packages=["aws_resource_inventory", "aws_resource_inventory.result_classes"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
