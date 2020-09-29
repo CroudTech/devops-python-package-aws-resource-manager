@@ -23,4 +23,7 @@ steps:
     python -m pip install --upgrade pip
     pip install -r requirements.txt
   displayName: 'Install dependencies'
-
+- task: BuildSDist@1
+  inputs:
+    setuppy: 'setup.py'
+    outputdir: '$(Build.ArtifactStagingDirectory)'
