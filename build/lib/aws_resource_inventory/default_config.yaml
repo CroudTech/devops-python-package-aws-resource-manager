@@ -47,90 +47,90 @@ services:
   - description
   - createdDate
   listPath: ElasticGpuSet
-- service: ApplicationAutoScaling
-  api: describeScalableTargets
-  params:
-    ServiceNamespace: ecs
-  title: Application Auto Scaling ECS Scalable Targets
-  id: appscaling-scalable-targets-ecs
-  jmespath: ScalableTargets
-  headings:
-  - ResourceId
-  - ScalableDimension
-  - MinCapacity
-  - MaxCapacity
-  - RoleARN
-  - CreationTime
-- service: ApplicationAutoScaling
-  api: describeScalableTargets
-  params:
-    ServiceNamespace: elasticmapreduce
-  title: Application Auto Scaling EMR Scalable Targets
-  id: appscaling-scalable-targets-emr
-  jmespath: ScalableTargets
-  headings:
-  - ResourceId
-  - ScalableDimension
-  - MinCapacity
-  - MaxCapacity
-  - RoleARN
-  - CreationTime
-- service: ApplicationAutoScaling
-  api: describeScalableTargets
-  params:
-    ServiceNamespace: ec2
-  title: Application Auto Scaling EC2 Scalable Targets
-  id: appscaling-scalable-targets-ec2
-  jmespath: ScalableTargets
-  headings:
-  - ResourceId
-  - ScalableDimension
-  - MinCapacity
-  - MaxCapacity
-  - RoleARN
-  - CreationTime
-- service: ApplicationAutoScaling
-  api: describeScalableTargets
-  params:
-    ServiceNamespace: appstream
-  title: Application Auto Scaling AppStream Scalable Targets
-  id: appscaling-scalable-targets-appstream
-  jmespath: ScalableTargets
-  headings:
-  - ResourceId
-  - ScalableDimension
-  - MinCapacity
-  - MaxCapacity
-  - RoleARN
-  - CreationTime
-- service: ApplicationAutoScaling
-  api: describeScalableTargets
-  params:
-    ServiceNamespace: dynamodb
-  title: Application Auto Scaling DynamoDB Scalable Targets
-  id: appscaling-scalable-targets-dynamodb
-  jmespath: ScalableTargets
-  headings:
-  - ResourceId
-  - ScalableDimension
-  - MinCapacity
-  - MaxCapacity
-  - RoleARN
-  - CreationTime
-- service: ApplicationAutoScaling
-  api: describeScalableTargets
-  params:
-    ServiceNamespace: rds
-  title: Application Auto Scaling RDS Scalable Targets
-  id: appscaling-scalable-targets-rds
-  jmespath: ScalableTargets
-  headings:
-  - ResourceId
-  - ScalableDimension
-  - MinCapacity
-  - MaxCapacity
-  - RoleARN
-  - CreationTime
+# - service: ApplicationAutoScaling
+#   api: describeScalableTargets
+#   params:
+#     ServiceNamespace: ecs
+#   title: Application Auto Scaling ECS Scalable Targets
+#   id: appscaling-scalable-targets-ecs
+#   jmespath: ScalableTargets
+#   headings:
+#   - ResourceId
+#   - ScalableDimension
+#   - MinCapacity
+#   - MaxCapacity
+#   - RoleARN
+#   - CreationTime
+# - service: ApplicationAutoScaling
+#   api: describeScalableTargets
+#   params:
+#     ServiceNamespace: elasticmapreduce
+#   title: Application Auto Scaling EMR Scalable Targets
+#   id: appscaling-scalable-targets-emr
+#   jmespath: ScalableTargets
+#   headings:
+#   - ResourceId
+#   - ScalableDimension
+#   - MinCapacity
+#   - MaxCapacity
+#   - RoleARN
+#   - CreationTime
+# - service: ApplicationAutoScaling
+#   api: describeScalableTargets
+#   params:
+#     ServiceNamespace: ec2
+#   title: Application Auto Scaling EC2 Scalable Targets
+#   id: appscaling-scalable-targets-ec2
+#   jmespath: ScalableTargets
+#   headings:
+#   - ResourceId
+#   - ScalableDimension
+#   - MinCapacity
+#   - MaxCapacity
+#   - RoleARN
+#   - CreationTime
+# - service: ApplicationAutoScaling
+#   api: describeScalableTargets
+#   params:
+#     ServiceNamespace: appstream
+#   title: Application Auto Scaling AppStream Scalable Targets
+#   id: appscaling-scalable-targets-appstream
+#   jmespath: ScalableTargets
+#   headings:
+#   - ResourceId
+#   - ScalableDimension
+#   - MinCapacity
+#   - MaxCapacity
+#   - RoleARN
+#   - CreationTime
+# - service: ApplicationAutoScaling
+#   api: describeScalableTargets
+#   params:
+#     ServiceNamespace: dynamodb
+#   title: Application Auto Scaling DynamoDB Scalable Targets
+#   id: appscaling-scalable-targets-dynamodb
+#   jmespath: ScalableTargets
+#   headings:
+#   - ResourceId
+#   - ScalableDimension
+#   - MinCapacity
+#   - MaxCapacity
+#   - RoleARN
+#   - CreationTime
+# - service: ApplicationAutoScaling
+#   api: describeScalableTargets
+#   params:
+#     ServiceNamespace: rds
+#   title: Application Auto Scaling RDS Scalable Targets
+#   id: appscaling-scalable-targets-rds
+#   jmespath: ScalableTargets
+#   headings:
+#   - ResourceId
+#   - ScalableDimension
+#   - MinCapacity
+#   - MaxCapacity
+#   - RoleARN
+#   - CreationTime
 - service: AutoScaling
   api: describeAutoScalingGroups
   title: EC2 Auto Scaling Groups
@@ -221,19 +221,19 @@ services:
   - Id
   - S3CanonicalUserId
   - Comment
-- service: CloudTrail
-  api: describeTrails
-  title: CloudTrail Trails
-  id: cloudtrail-trails
-  jmespath: trailList
-  headings:
-  - Name
-  - S3BucketName
-  - SnsTopicName
-  - IncludeGlobalServiceEvents
-  - IsMultiRegionTrail
-  - HomeRegion
-  - HasCustomEventSelectors
+# - service: CloudTrail
+#   api: describeTrails
+#   title: CloudTrail Trails
+#   id: cloudtrail-trails
+#   jmespath: trailList
+#   headings:
+#   - Name
+#   - S3BucketName
+#   - SnsTopicName
+#   - IncludeGlobalServiceEvents
+#   - IsMultiRegionTrail
+#   - HomeRegion
+#   - HasCustomEventSelectors
 - service: CloudWatch
   api: describeAlarms
   title: CloudWatch Alarms
@@ -1538,299 +1538,299 @@ services:
   - HealthCheckPath
   - HealthCheckIntervalSeconds
   - UnhealthyThresholdCount
-- service: EMR
-  api: listClusters
-  title: EMR Clusters
-  id: emr-clusters
-  jmespath: Clusters
-  headings:
-  - Id
-  - Name
-  - State
-  - StateChangeReason.Code
-  - StateChangeReason.Message
-  - Timeline.CreationDateTime
-- service: EMR
-  api: listSecurityConfigurations
-  title: EMR Security Configurations
-  id: emr-security-configurations
-  jmespath: SecurityConfigurations
-  headings:
-  - Name
-  - CreationDateTime
-- service: ElasticTranscoder
-  skip_regions:
-  - ap-northeast-2
-  - eu-west-2
-  - eu-central-1
-  - eu-west-3
-  - ca-central-1
-  - us-east-2
-  - sa-east-1
-  - us-east-2
-  - eu-west-3
-  - eu-west-2
-  - eu-central-1
-  - ca-central-1
-  - eu-west-3
-  api: listPipelines
-  title: ElasticTranscoder Pipelines
-  id: elastictranscoder-pipelines
-  jmespath: Pipelines
-  headings:
-  - Id
-  - Arn
-  - Name
-  - Status
-  - InputBucket
-  - OutputBucket
-- service: Firehose
-  skip_regions:
-  - ap-northeast-2
-  - ap-south-1
-  - ca-central-1
-  - eu-west-2
-  - eu-west-3
-  - sa-east-1
-  api: listDeliveryStreams
-  title: Kinesis Firehose Delivery Streams
-  id: firehose-delivery-streams
-  jmespath: map(&{Name:@}, DeliveryStreamNames)
-  headings:
-  - Name
-- service: Inspector
-  skip_regions:
-  - ap-southeast-1
-  - ca-central-1
-  - eu-west-2
-  - eu-west-3
-  - sa-east-1
-  api: listRulesPackages
-  title: Inspector Rules Packages
-  id: inspector-rules-packages
-  jmespath: map(&{Arn:@}, rulesPackageArns)
-  headings:
-  - Arn
-- service: Inspector
-  skip_regions:
-  - ap-southeast-1
-  - ca-central-1
-  - eu-west-2
-  - eu-west-3
-  - sa-east-1
-  api: listAssessmentTargets
-  params:
-    maxResults: 500
-  title: Inspector Assessment Targets
-  id: inspector-assessment-targets
-  jmespath: map(&{Arn:@}, assessmentTargetArns)
-  headings:
-  - Arn
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listAuthorizers
-  title: IoT Authorizers
-  id: iot-authorizers
-  jmespath: authorizers
-  headings:
-  - authorizerName
-  - authorizerArn
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listCACertificates
-  title: IoT CA Certificates
-  id: iot-ca-certificates
-  jmespath: certificates
-  headings:
-  - certificateArn
-  - certificateId
-  - status
-  - creationDate
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listCertificates
-  title: IoT Certificates
-  id: iot-certificates
-  jmespath: certificates
-  headings:
-  - certificateArn
-  - certificateId
-  - status
-  - creationDate
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listIndices
-  title: IoT Indices
-  id: iot-indices
-  jmespath: map(&{Name:@}, indexNames)
-  headings:
-  - Name
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listJobs
-  title: IoT Jobs
-  id: iot-jobs
-  jmespath: jobs
-  headings:
-  - jobArn
-  - jobId
-  - thingGroupId
-  - targetSelection
-  - status
-  - createdAt
-  - lastUpdateAt
-  - completedAt
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listOutgoingCertificates
-  title: IoT Outgoing Certificates
-  id: iot-outgoing-certificates
-  jmespath: outgoingCertificates
-  headings:
-  - certificateArn
-  - certificateId
-  - transferredTo
-  - transferDate
-  - transferMessage
-  - creationDate
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listPolicies
-  title: IoT Policies
-  id: iot-policies
-  jmespath: policies
-  headings:
-  - policyName
-  - policyArn
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listRoleAliases
-  title: IoT Role Aliases
-  id: iot-role-aliases
-  jmespath: map(&{Alias:@}, roleAliases)
-  headings:
-  - Alias
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listThingGroups
-  title: IoT Thing Groups
-  id: iot-thing-groups
-  jmespath: thingGroups
-  headings:
-  - groupName
-  - groupArn
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listThingRegistrationTasks
-  title: IoT Thing Registration Tasks
-  id: iot-thing-registration-tasks
-  jmespath: map(&{TaskId:@}, taskIds)
-  headings:
-  - TaskId
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listThings
-  title: IoT Things
-  id: iot-things
-  jmespath: things
-  headings:
-  - thingName
-  - thingTypeName
-  - thingArn
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listThingTypes
-  title: IoT Thing Types
-  id: iot-thing-types
-  jmespath: thingTypes
-  headings:
-  - thingTypeName
-  - thingTypeArn
-  - thingTypeProperties.thingTypeDescription
-- service: Iot
-  skip_regions:
-  - ap-south-1
-  - ca-central-1
-  - eu-west-3
-  - sa-east-1
-  - us-west-1
-  api: listTopicRules
-  title: IoT Topic Rules
-  id: iot-topic-rules
-  jmespath: rules
-  headings:
-  - ruleArn
-  - ruleName
-  - topicPattern
-  - createdAt
-  - ruleDisabled
-- service: Kinesis
-  api: listStreams
-  title: Kinesis Streams
-  id: kinesis-streams
-  jmespath: map(&{Name:@}, StreamNames)
-  headings:
-  - Name
+# - service: EMR
+#   api: listClusters
+#   title: EMR Clusters
+#   id: emr-clusters
+#   jmespath: Clusters
+#   headings:
+#   - Id
+#   - Name
+#   - State
+#   - StateChangeReason.Code
+#   - StateChangeReason.Message
+#   - Timeline.CreationDateTime
+# - service: EMR
+#   api: listSecurityConfigurations
+#   title: EMR Security Configurations
+#   id: emr-security-configurations
+#   jmespath: SecurityConfigurations
+#   headings:
+#   - Name
+#   - CreationDateTime
+# - service: ElasticTranscoder
+#   skip_regions:
+#   - ap-northeast-2
+#   - eu-west-2
+#   - eu-central-1
+#   - eu-west-3
+#   - ca-central-1
+#   - us-east-2
+#   - sa-east-1
+#   - us-east-2
+#   - eu-west-3
+#   - eu-west-2
+#   - eu-central-1
+#   - ca-central-1
+#   - eu-west-3
+#   api: listPipelines
+#   title: ElasticTranscoder Pipelines
+#   id: elastictranscoder-pipelines
+#   jmespath: Pipelines
+#   headings:
+#   - Id
+#   - Arn
+#   - Name
+#   - Status
+#   - InputBucket
+#   - OutputBucket
+# - service: Firehose
+#   skip_regions:
+#   - ap-northeast-2
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-2
+#   - eu-west-3
+#   - sa-east-1
+#   api: listDeliveryStreams
+#   title: Kinesis Firehose Delivery Streams
+#   id: firehose-delivery-streams
+#   jmespath: map(&{Name:@}, DeliveryStreamNames)
+#   headings:
+#   - Name
+# - service: Inspector
+#   skip_regions:
+#   - ap-southeast-1
+#   - ca-central-1
+#   - eu-west-2
+#   - eu-west-3
+#   - sa-east-1
+#   api: listRulesPackages
+#   title: Inspector Rules Packages
+#   id: inspector-rules-packages
+#   jmespath: map(&{Arn:@}, rulesPackageArns)
+#   headings:
+#   - Arn
+# - service: Inspector
+#   skip_regions:
+#   - ap-southeast-1
+#   - ca-central-1
+#   - eu-west-2
+#   - eu-west-3
+#   - sa-east-1
+#   api: listAssessmentTargets
+#   params:
+#     maxResults: 500
+#   title: Inspector Assessment Targets
+#   id: inspector-assessment-targets
+#   jmespath: map(&{Arn:@}, assessmentTargetArns)
+#   headings:
+#   - Arn
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listAuthorizers
+#   title: IoT Authorizers
+#   id: iot-authorizers
+#   jmespath: authorizers
+#   headings:
+#   - authorizerName
+#   - authorizerArn
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listCACertificates
+#   title: IoT CA Certificates
+#   id: iot-ca-certificates
+#   jmespath: certificates
+#   headings:
+#   - certificateArn
+#   - certificateId
+#   - status
+#   - creationDate
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listCertificates
+#   title: IoT Certificates
+#   id: iot-certificates
+#   jmespath: certificates
+#   headings:
+#   - certificateArn
+#   - certificateId
+#   - status
+#   - creationDate
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listIndices
+#   title: IoT Indices
+#   id: iot-indices
+#   jmespath: map(&{Name:@}, indexNames)
+#   headings:
+#   - Name
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listJobs
+#   title: IoT Jobs
+#   id: iot-jobs
+#   jmespath: jobs
+#   headings:
+#   - jobArn
+#   - jobId
+#   - thingGroupId
+#   - targetSelection
+#   - status
+#   - createdAt
+#   - lastUpdateAt
+#   - completedAt
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listOutgoingCertificates
+#   title: IoT Outgoing Certificates
+#   id: iot-outgoing-certificates
+#   jmespath: outgoingCertificates
+#   headings:
+#   - certificateArn
+#   - certificateId
+#   - transferredTo
+#   - transferDate
+#   - transferMessage
+#   - creationDate
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listPolicies
+#   title: IoT Policies
+#   id: iot-policies
+#   jmespath: policies
+#   headings:
+#   - policyName
+#   - policyArn
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listRoleAliases
+#   title: IoT Role Aliases
+#   id: iot-role-aliases
+#   jmespath: map(&{Alias:@}, roleAliases)
+#   headings:
+#   - Alias
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listThingGroups
+#   title: IoT Thing Groups
+#   id: iot-thing-groups
+#   jmespath: thingGroups
+#   headings:
+#   - groupName
+#   - groupArn
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listThingRegistrationTasks
+#   title: IoT Thing Registration Tasks
+#   id: iot-thing-registration-tasks
+#   jmespath: map(&{TaskId:@}, taskIds)
+#   headings:
+#   - TaskId
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listThings
+#   title: IoT Things
+#   id: iot-things
+#   jmespath: things
+#   headings:
+#   - thingName
+#   - thingTypeName
+#   - thingArn
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listThingTypes
+#   title: IoT Thing Types
+#   id: iot-thing-types
+#   jmespath: thingTypes
+#   headings:
+#   - thingTypeName
+#   - thingTypeArn
+#   - thingTypeProperties.thingTypeDescription
+# - service: Iot
+#   skip_regions:
+#   - ap-south-1
+#   - ca-central-1
+#   - eu-west-3
+#   - sa-east-1
+#   - us-west-1
+#   api: listTopicRules
+#   title: IoT Topic Rules
+#   id: iot-topic-rules
+#   jmespath: rules
+#   headings:
+#   - ruleArn
+#   - ruleName
+#   - topicPattern
+#   - createdAt
+#   - ruleDisabled
+# - service: Kinesis
+#   api: listStreams
+#   title: Kinesis Streams
+#   id: kinesis-streams
+#   jmespath: map(&{Name:@}, StreamNames)
+#   headings:
+#   - Name
 - service: KMS
   api: listAliases
   title: KMS Aliases
@@ -2008,27 +2008,27 @@ services:
   - SizeInBytes
   - MLModelType
   - Message
-- service: OpsWorks
-  api: describeStacks
-  title: OpsWorks Stacks
-  id: opsworks-stacks
-  jmespath: Stacks
-  headings:
-  - StackId
-  - Name
-  - Arn
-  - Region
-  - VpcId
-  - CreatedAt
-- service: Polly
-  api: listLexicons
-  title: Polly Lexicons
-  id: polly-lexicons
-  jmespath: Lexicons
-  headings:
-  - Name
-  - Attributes.Size
-  - Attributes.LanguageCode
+# - service: OpsWorks
+#   api: describeStacks
+#   title: OpsWorks Stacks
+#   id: opsworks-stacks
+#   jmespath: Stacks
+#   headings:
+#   - StackId
+#   - Name
+#   - Arn
+#   - Region
+#   - VpcId
+#   - CreatedAt
+# - service: Polly
+#   api: listLexicons
+#   title: Polly Lexicons
+#   id: polly-lexicons
+#   jmespath: Lexicons
+#   headings:
+#   - Name
+#   - Attributes.Size
+  # - Attributes.LanguageCode
 - service: RDS
   api: describeAccountAttributes
   title: RDS Account Attributes
@@ -2467,45 +2467,45 @@ services:
   - SubmittedDate
   only_regions:
   - us-east-1
-- service: ServiceCatalog
-  api: listAcceptedPortfolioShares
-  title: Service Catalog Accepted Portfolio Shares
-  id: servicecatalog-accepted-portfolio-shares
-  jmespath: PortfolioDetails
-  headings:
-  - Id
-  - DisplayName
-  - Description
-  - CreatedTime
-  - ProviderName
-- service: ServiceCatalog
-  api: listPortfolios
-  title: Service Catalog Portfolios
-  id: servicecatalog-portfolios
-  jmespath: PortfolioDetails
-  headings:
-  - Id
-  - DisplayName
-  - Description
-  - CreatedTime
-  - ProviderName
-- service: ServiceCatalog
-  api: listRecordHistory
-  title: Service Catalog Record History
-  id: servicecatalog-record-history
-  jmespath: RecordDetails
-  headings:
-  - RecordId
-  - ProvisionedProductName
-  - Status
-  - CreatedTime
-  - UpdatedTime
-  - ProvisionedProductType
-  - RecordType
-  - ProvisionedProductId
-  - ProductId
-  - ProvisioningArtifactId
-  - PathId
+# - service: ServiceCatalog
+#   api: listAcceptedPortfolioShares
+#   title: Service Catalog Accepted Portfolio Shares
+#   id: servicecatalog-accepted-portfolio-shares
+#   jmespath: PortfolioDetails
+#   headings:
+#   - Id
+#   - DisplayName
+#   - Description
+#   - CreatedTime
+#   - ProviderName
+# - service: ServiceCatalog
+#   api: listPortfolios
+#   title: Service Catalog Portfolios
+#   id: servicecatalog-portfolios
+#   jmespath: PortfolioDetails
+#   headings:
+#   - Id
+#   - DisplayName
+#   - Description
+#   - CreatedTime
+#   - ProviderName
+# - service: ServiceCatalog
+#   api: listRecordHistory
+#   title: Service Catalog Record History
+#   id: servicecatalog-record-history
+#   jmespath: RecordDetails
+#   headings:
+#   - RecordId
+#   - ProvisionedProductName
+#   - Status
+#   - CreatedTime
+#   - UpdatedTime
+#   - ProvisionedProductType
+#   - RecordType
+#   - ProvisionedProductId
+#   - ProductId
+#   - ProvisioningArtifactId
+#   - PathId
 - service: SES
   skip_regions:
   - eu-west-2
@@ -2888,139 +2888,139 @@ services:
   - LastSuccessfulSyncTime
   - LastStatus
   - SyncCreatedTime
-- service: StorageGateway
-  api: listFileShares
-  title: Storage Gateway File Shares
-  id: storagegateway-file-shares
-  jmespath: FileShareInfoList
-  headings:
-  - FileShareARN
-  - FileShareId
-  - FileShareStatus
-  - GatewayARN
-- service: StorageGateway
-  api: listGateways
-  title: Storage Gateway Gateways
-  id: storagegateway-gateways
-  jmespath: Gateways
-  headings:
-  - GatewayId
-  - GatewayType
-  - GatewayOperationalState
-  - GatewayName
-- service: StorageGateway
-  api: listTapes
-  title: Storage Gateway Tapes
-  id: storagegateway-tapes
-  jmespath: TapeInfos
-  headings:
-  - TapeARN
-  - TapeBarcode
-  - TapeSizeInBytes
-  - TapeStatus
-  - GatewayARN
-- service: WAF
-  api: listByteMatchSets
-  title: WAF Byte Match Sets
-  id: waf-byte-match-sets
-  jmespath: ByteMatchSets
-  headings:
-  - ByteMatchSetId
-  - Name
-- service: WAF
-  api: listGeoMatchSets
-  title: WAF Geo Match Sets
-  id: waf-get-match-sets
-  jmespath: GeoMatchSets
-  headings:
-  - GeoMatchSetId
-  - Name
-- service: WAF
-  api: listIPSets
-  title: WAF IP Sets
-  id: waf-ip-sets
-  jmespath: IPSets
-  headings:
-  - IPSetId
-  - Name
-- service: WAF
-  api: listRateBasedRules
-  title: WAF Rate Based Rules
-  id: waf-rate-based-rules
-  jmespath: Rules
-  headings:
-  - RuleId
-  - Name
-- service: WAF
-  api: listRegexMatchSets
-  title: WAF Regex Match Sets
-  id: waf-regex-match-sets
-  jmespath: RegexMatchSets
-  headings:
-  - RegexMatchSetId
-  - Name
-- service: WAF
-  api: listRegexPatternSets
-  title: WAF Regex Pattern Sets
-  id: waf-regex-pattern-sets
-  jmespath: RegexPatternSets
-  headings:
-  - RegexPatternSetId
-  - Name
-- service: WAF
-  api: listRuleGroups
-  title: WAF Rule Groups
-  id: waf-rule-groups
-  jmespath: RuleGroups
-  headings:
-  - RuleGroupId
-  - Name
-- service: WAF
-  api: listRules
-  title: WAF Rules
-  id: waf-rules
-  jmespath: Rules
-  headings:
-  - RuleId
-  - Name
-- service: WAF
-  api: listSizeConstraintSets
-  title: WAF Size Constraint Sets
-  id: waf-size-constraint-sets
-  jmespath: SizeConstraintSets
-  headings:
-  - SizeConstraintSetId
-  - Name
-- service: WAF
-  api: listSqlInjectionMatchSets
-  title: WAF SQL Injection Match Sets
-  id: waf-sql-injection-match-sets
-  jmespath: SqlInjectionMatchSets
-  headings:
-  - SqlInjectionMatchSetId
-  - Name
-- service: WAF
-  api: listSubscribedRuleGroups
-  title: WAF Subscribed Rule Groups
-  id: waf-subscribed-rule-groups
-  jmespath: RuleGroups
-  headings:
-  - RuleGroupId
-  - Name
-  - MetricName
-# - service: WAF
-#   api: listWebACLs
-#   title: WAF Web ACLs
-#   id: waf-web-acls
-#   jmespath: WebACLs
+# - service: StorageGateway
+#   api: listFileShares
+#   title: Storage Gateway File Shares
+#   id: storagegateway-file-shares
+#   jmespath: FileShareInfoList
 #   headings:
-#   - WebACLId
+#   - FileShareARN
+#   - FileShareId
+#   - FileShareStatus
+#   - GatewayARN
+# - service: StorageGateway
+#   api: listGateways
+#   title: Storage Gateway Gateways
+#   id: storagegateway-gateways
+#   jmespath: Gateways
+#   headings:
+#   - GatewayId
+#   - GatewayType
+#   - GatewayOperationalState
+#   - GatewayName
+# - service: StorageGateway
+#   api: listTapes
+#   title: Storage Gateway Tapes
+#   id: storagegateway-tapes
+#   jmespath: TapeInfos
+#   headings:
+#   - TapeARN
+#   - TapeBarcode
+#   - TapeSizeInBytes
+#   - TapeStatus
+#   - GatewayARN
+# - service: WAF
+#   api: listByteMatchSets
+#   title: WAF Byte Match Sets
+#   id: waf-byte-match-sets
+#   jmespath: ByteMatchSets
+#   headings:
+#   - ByteMatchSetId
 #   - Name
-- service: WAF
-  api: listXssMatchSets
-  title: WAF XSS Match Sets
-  id: waf-xss-match-sets
-  jmespath: XssMatchSets
-  headings:
-  - XssMatchSetId
-  - Name
+# - service: WAF
+#   api: listGeoMatchSets
+#   title: WAF Geo Match Sets
+#   id: waf-get-match-sets
+#   jmespath: GeoMatchSets
+#   headings:
+#   - GeoMatchSetId
+#   - Name
+# - service: WAF
+#   api: listIPSets
+#   title: WAF IP Sets
+#   id: waf-ip-sets
+#   jmespath: IPSets
+#   headings:
+#   - IPSetId
+#   - Name
+# - service: WAF
+#   api: listRateBasedRules
+#   title: WAF Rate Based Rules
+#   id: waf-rate-based-rules
+#   jmespath: Rules
+#   headings:
+#   - RuleId
+#   - Name
+# - service: WAF
+#   api: listRegexMatchSets
+#   title: WAF Regex Match Sets
+#   id: waf-regex-match-sets
+#   jmespath: RegexMatchSets
+#   headings:
+#   - RegexMatchSetId
+#   - Name
+# - service: WAF
+#   api: listRegexPatternSets
+#   title: WAF Regex Pattern Sets
+#   id: waf-regex-pattern-sets
+#   jmespath: RegexPatternSets
+#   headings:
+#   - RegexPatternSetId
+#   - Name
+# - service: WAF
+#   api: listRuleGroups
+#   title: WAF Rule Groups
+#   id: waf-rule-groups
+#   jmespath: RuleGroups
+#   headings:
+#   - RuleGroupId
+#   - Name
+# - service: WAF
+#   api: listRules
+#   title: WAF Rules
+#   id: waf-rules
+#   jmespath: Rules
+#   headings:
+#   - RuleId
+#   - Name
+# - service: WAF
+#   api: listSizeConstraintSets
+#   title: WAF Size Constraint Sets
+#   id: waf-size-constraint-sets
+#   jmespath: SizeConstraintSets
+#   headings:
+#   - SizeConstraintSetId
+#   - Name
+# - service: WAF
+#   api: listSqlInjectionMatchSets
+#   title: WAF SQL Injection Match Sets
+#   id: waf-sql-injection-match-sets
+#   jmespath: SqlInjectionMatchSets
+#   headings:
+#   - SqlInjectionMatchSetId
+#   - Name
+# - service: WAF
+#   api: listSubscribedRuleGroups
+#   title: WAF Subscribed Rule Groups
+#   id: waf-subscribed-rule-groups
+#   jmespath: RuleGroups
+#   headings:
+#   - RuleGroupId
+#   - Name
+#   - MetricName
+# # - service: WAF
+# #   api: listWebACLs
+# #   title: WAF Web ACLs
+# #   id: waf-web-acls
+# #   jmespath: WebACLs
+# #   headings:
+# #   - WebACLId
+# #   - Name
+# - service: WAF
+#   api: listXssMatchSets
+#   title: WAF XSS Match Sets
+#   id: waf-xss-match-sets
+#   jmespath: XssMatchSets
+#   headings:
+#   - XssMatchSetId
+#   - Name

@@ -8,6 +8,7 @@ requirements.txt
 setup.cfg
 setup.py
 aws_resource_inventory/__init__.py
+aws_resource_inventory/__init__.pyc
 aws_resource_inventory/cli.py
 aws_resource_inventory/default_config.json
 aws_resource_inventory/default_config.yaml
