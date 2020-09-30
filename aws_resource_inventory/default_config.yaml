@@ -2506,30 +2506,30 @@ services:
 #   - ProductId
 #   - ProvisioningArtifactId
 #   - PathId
-- service: SES
-  skip_regions:
-  - eu-west-2
-  - eu-west-3
-  - ap-southeast-2
-  - us-west-1
-  - ap-south-1
-  - ap-southeast-1
-  - us-east-2
-  - eu-central-1
-  - ap-northeast-1
-  - ca-central-1
-  - ap-northeast-2
-  - sa-east-1
-  api: describeActiveReceiptRuleSet
-  title: Simple Email Service (SES) Active Receipt Rule Set
-  id: ses-active-receipt-ruleset
-  jmespath: Rules
-  headings:
-  - Name
-  - Enabled
-  - TlsPolicy
-  - Recipients[]
-  - ScanEnabled
+# - service: SES
+#   skip_regions:
+#   - eu-west-2
+#   - eu-west-3
+#   - ap-southeast-2
+#   - us-west-1
+#   - ap-south-1
+#   - ap-southeast-1
+#   - us-east-2
+#   - eu-central-1
+#   - ap-northeast-1
+#   - ca-central-1
+#   - ap-northeast-2
+#   - sa-east-1
+#   api: describeActiveReceiptRuleSet
+#   title: Simple Email Service (SES) Active Receipt Rule Set
+#   id: ses-active-receipt-ruleset
+#   jmespath: Rules
+#   headings:
+#   - Name
+#   - Enabled
+#   - TlsPolicy
+#   - Recipients[]
+#   - ScanEnabled
 - service: SES
   skip_regions:
   - eu-west-2
@@ -2576,26 +2576,26 @@ services:
 #   - TemplateSubject
 #   - SuccessRedirectionURL
   # - FailureRedirectionURL
-- service: SES
-  skip_regions:
-  - eu-west-2
-  - eu-west-3
-  - ap-southeast-2
-  - us-west-1
-  - ap-south-1
-  - ap-southeast-1
-  - us-east-2
-  - eu-central-1
-  - ap-northeast-1
-  - ca-central-1
-  - ap-northeast-2
-  - sa-east-1
-  api: listIdentities
-  title: Simple Email Service (SES) Identities
-  id: ses-identities
-  jmespath: map(&{Identity:@}, Identities)
-  headings:
-  - Identity
+# - service: SES
+#   skip_regions:
+#   - eu-west-2
+#   - eu-west-3
+#   - ap-southeast-2
+#   - us-west-1
+#   - ap-south-1
+#   - ap-southeast-1
+#   - us-east-2
+#   - eu-central-1
+#   - ap-northeast-1
+#   - ca-central-1
+#   - ap-northeast-2
+#   - sa-east-1
+#   api: listIdentities
+#   title: Simple Email Service (SES) Identities
+#   id: ses-identities
+#   jmespath: map(&{Identity:@}, Identities)
+#   headings:
+#   - Identity
 # - service: SES
 #   skip_regions:
 #   - eu-west-2
@@ -2639,27 +2639,27 @@ services:
 #   headings:
 #   - Name
 #   - CreatedTimestamp
-- service: SES
-  skip_regions:
-  - eu-west-2
-  - eu-west-3
-  - ap-southeast-2
-  - us-west-1
-  - ap-south-1
-  - ap-southeast-1
-  - us-east-2
-  - eu-central-1
-  - ap-northeast-1
-  - ca-central-1
-  - ap-northeast-2
-  - sa-east-1
-  api: listTemplates
-  title: Simple Email Service (SES) Templates
-  id: ses-templates
-  jmespath: TemplatesMetadata
-  headings:
-  - Name
-  - CreatedTimestamp
+# - service: SES
+#   skip_regions:
+#   - eu-west-2
+#   - eu-west-3
+#   - ap-southeast-2
+#   - us-west-1
+#   - ap-south-1
+#   - ap-southeast-1
+#   - us-east-2
+#   - eu-central-1
+#   - ap-northeast-1
+#   - ca-central-1
+#   - ap-northeast-2
+#   - sa-east-1
+#   api: listTemplates
+#   title: Simple Email Service (SES) Templates
+#   id: ses-templates
+#   jmespath: TemplatesMetadata
+#   headings:
+#   - Name
+#   - CreatedTimestamp
 # - service: SES
 #   skip_regions:
 #   - eu-west-2
