@@ -135,11 +135,11 @@ class Service:
 
         if (
             self.is_available_in()
-            or (
+            and (
                 "skip_regions" not in self.config
                 or self.region_name not in self.config["skip_regions"]
             )
-            or (
+            and (
                 "only_regions" not in self.config
                 or self.region_name in self.config["only_regions"]
             )

@@ -542,122 +542,122 @@ services:
 #   - name
 #   - defaultJobTimeoutMinutes
 #   - created
-- service: DirectConnect
-  api: describeConnections
-  title: Direct Connect Connections
-  id: direct-connect-connections
-  jmespath: connections
-  headings:
-  - ownerAccount
-  - connectionId
-  - connectionName
-  - connectionState
-  - region
-  - location
-  - bandwidth
-  - partnerName
-  - awsDevice
-- service: DirectConnect
-  api: describeLags
-  title: Direct Connect Link Aggregations Groups
-  id: direct-connect-lags
-  jmespath: lags
-  headings:
-  - connectionsBandwidth
-  - numberOfConnections
-  - lagId
-  - ownerAccount
-  - lagName
-  - lagState
-  - location
-  - region
-  - minimumLinks
-  - awsDevice
-- service: DirectConnect
-  api: describeVirtualGateways
-  title: Direct Connect Virtual Gateways
-  id: direct-connect-virtual-gateways
-  jmespath: virtualGateways
-  headings:
-  - virtualGatewayId
-  - virtualGatewayState
-- service: DirectConnect
-  api: describeVirtualInterfaces
-  title: Direct Connect Virtual Interfaces
-  id: direct-connect-virtual-interfaces
-  jmespath: virtualInterfaces
-  headings:
-  - ownerAccount
-  - virtualInterfaceId
-  - location
-  - connectionId
-  - virtualInterfaceType
-  - virtualInterfaceName
-  - amazonAddress
-  - customerAddress
-  - virtualInterfaceState
-- service: DynamoDB
-  skip_regions:
-  - ap-southeast-2
-  - ap-southeast-1
-  - ap-south-1
-  - ap-northeast-2
-  - ap-northeast-1
-  - eu-central-1
-  - eu-west-3
-  - eu-west-2
-  - ca-central-1
-  - us-west-1
-  - sa-east-1
-  api: listBackups
-  title: DynamoDB Backups
-  id: dynamodb-backups
-  jmespath: BackupSummaries
-  headings:
-  - TableName
-  - TableId
-  - BackupArn
-  - BackupName
-  - BackupCreationDateTime
-  - BackupStatus
-  - BackupSizeBytes
-- service: DynamoDB
-  skip_regions:
-  - ap-southeast-2
-  - ap-southeast-1
-  - ap-south-1
-  - ap-northeast-2
-  - ap-northeast-1
-  - eu-central-1
-  - eu-west-3
-  - eu-west-2
-  - ca-central-1
-  - us-west-1
-  - sa-east-1
-  api: listGlobalTables
-  title: DynamoDB Global Tables
-  id: dynamodb-global-tables
-  jmespath: GlobalTables
-  headings:
-  - GlobalTableName
-  - ReplicationGroup[].RegionName
-- service: DynamoDB
-  api: listTables
-  title: DynamoDB Tables
-  id: dynamodb-tables
-  jmespath: map(&{Name:@}, TableNames)
-  headings:
-  - Name
-- service: DynamoDBStreams
-  api: listStreams
-  title: DynamoDB Streams
-  id: dynamodb-streams
-  jmespath: Streams
-  headings:
-  - StreamArn
-  - TableName
-  - StreamLabel
-  - LastEvaluatedStreamArn
+# - service: DirectConnect
+#   api: describeConnections
+#   title: Direct Connect Connections
+#   id: direct-connect-connections
+#   jmespath: connections
+#   headings:
+#   - ownerAccount
+#   - connectionId
+#   - connectionName
+#   - connectionState
+#   - region
+#   - location
+#   - bandwidth
+#   - partnerName
+#   - awsDevice
+# - service: DirectConnect
+#   api: describeLags
+#   title: Direct Connect Link Aggregations Groups
+#   id: direct-connect-lags
+#   jmespath: lags
+#   headings:
+#   - connectionsBandwidth
+#   - numberOfConnections
+#   - lagId
+#   - ownerAccount
+#   - lagName
+#   - lagState
+#   - location
+#   - region
+#   - minimumLinks
+#   - awsDevice
+# - service: DirectConnect
+#   api: describeVirtualGateways
+#   title: Direct Connect Virtual Gateways
+#   id: direct-connect-virtual-gateways
+#   jmespath: virtualGateways
+#   headings:
+#   - virtualGatewayId
+#   - virtualGatewayState
+# - service: DirectConnect
+#   api: describeVirtualInterfaces
+#   title: Direct Connect Virtual Interfaces
+#   id: direct-connect-virtual-interfaces
+#   jmespath: virtualInterfaces
+#   headings:
+#   - ownerAccount
+#   - virtualInterfaceId
+#   - location
+#   - connectionId
+#   - virtualInterfaceType
+#   - virtualInterfaceName
+#   - amazonAddress
+#   - customerAddress
+#   - virtualInterfaceState
+# - service: DynamoDB
+#   skip_regions:
+#   - ap-southeast-2
+#   - ap-southeast-1
+#   - ap-south-1
+#   - ap-northeast-2
+#   - ap-northeast-1
+#   - eu-central-1
+#   - eu-west-3
+#   - eu-west-2
+#   - ca-central-1
+#   - us-west-1
+#   - sa-east-1
+#   api: listBackups
+#   title: DynamoDB Backups
+#   id: dynamodb-backups
+#   jmespath: BackupSummaries
+#   headings:
+#   - TableName
+#   - TableId
+#   - BackupArn
+#   - BackupName
+#   - BackupCreationDateTime
+#   - BackupStatus
+#   - BackupSizeBytes
+# - service: DynamoDB
+#   skip_regions:
+#   - ap-southeast-2
+#   - ap-southeast-1
+#   - ap-south-1
+#   - ap-northeast-2
+#   - ap-northeast-1
+#   - eu-central-1
+#   - eu-west-3
+#   - eu-west-2
+#   - ca-central-1
+#   - us-west-1
+#   - sa-east-1
+#   api: listGlobalTables
+#   title: DynamoDB Global Tables
+#   id: dynamodb-global-tables
+#   jmespath: GlobalTables
+#   headings:
+#   - GlobalTableName
+#   - ReplicationGroup[].RegionName
+# - service: DynamoDB
+#   api: listTables
+#   title: DynamoDB Tables
+#   id: dynamodb-tables
+#   jmespath: map(&{Name:@}, TableNames)
+#   headings:
+#   - Name
+# - service: DynamoDBStreams
+#   api: listStreams
+#   title: DynamoDB Streams
+#   id: dynamodb-streams
+#   jmespath: Streams
+#   headings:
+#   - StreamArn
+#   - TableName
+#   - StreamLabel
+#   - LastEvaluatedStreamArn
 - service: EC2
   api: describeAddresses
   title: EC2 Elastic IP Addresses
@@ -673,29 +673,29 @@ services:
   - NetworkInterfaceOwnerId
   - PrivateIpAddress
   - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: EC2
-  api: describeAvailabilityZones
-  title: EC2 Availability Zones
-  id: ec2-availability-zones
-  jmespath: AvailabilityZones
-  headings:
-  - ZoneName
-  - State
-  - Messages[]
-- service: EC2
-  api: describeBundleTasks
-  title: EC2 Bundle Tasks
-  id: ec2-bundle-tasks
-  jmespath: BundleTasks
-  headings:
-  - BundleId
-  - BundleTaskError.Message
-  - InstanceId
-  - Progress
-  - StartTime
-  - State
-  - Storage
-  - UpdateTime
+# - service: EC2
+#   api: describeAvailabilityZones
+#   title: EC2 Availability Zones
+#   id: ec2-availability-zones
+#   jmespath: AvailabilityZones
+#   headings:
+#   - ZoneName
+#   - State
+#   - Messages[]
+# - service: EC2
+#   api: describeBundleTasks
+#   title: EC2 Bundle Tasks
+#   id: ec2-bundle-tasks
+#   jmespath: BundleTasks
+#   headings:
+#   - BundleId
+#   - BundleTaskError.Message
+#   - InstanceId
+#   - Progress
+#   - StartTime
+#   - State
+#   - Storage
+#   - UpdateTime
 # - service: EC2
 #   skip_regions:
 #   - ap-northeast-1
@@ -1098,16 +1098,16 @@ services:
   - CidrBlock
   - MapPublicIpOnLaunch
   - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: EC2
-  api: describeTags
-  title: EC2 Tags
-  id: ec2-tags
-  jmespath: Tags
-  headings:
-  - ResourceType
-  - ResourceId
-  - Key
-  - Value
+# - service: EC2
+#   api: describeTags
+#   title: EC2 Tags
+#   id: ec2-tags
+#   jmespath: Tags
+#   headings:
+#   - ResourceType
+#   - ResourceId
+#   - Key
+#   - Value
 - service: EC2
   api: describeVolumes
   title: EC2 EBS Volumes
@@ -1159,75 +1159,75 @@ services:
   - VpcId
   - ClassicLinkEnabled
   - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: EC2
-  skip_regions:
-  - ap-northeast-1
-  - ap-northeast-2
-  - ap-south-1
-  - ca-central-1
-  - us-east-2
-  - eu-west-2
-  - eu-west-3
-  - eu-central-1
-  api: describeVpcClassicLinkDnsSupport
-  title: EC2 VPC ClassicLink DNS Support
-  id: ec2-vpc-classiclink-dns-support
-  jmespath: Vpcs
-  headings:
-  - VpcId
-  - ClassicLinkDnsSupported
-- service: EC2
-  skip_regions:
-  - eu-west-3
-  api: describeVpcEndpointConnectionNotifications
-  title: EC2 VPC Endpoint Connection Notifications
-  id: ec2-vpc-endpoint-connection-notifications
-  jmespath: ConnectionNotificationSet
-  headings:
-  - ConnectionNotificationId
-  - ServiceId
-  - VpcEndpointId
-  - ConnectionNotificationArn
-  - ConnectionEvents
-  - ConnectionNotificationState
-- service: EC2
-  skip_regions:
-  - eu-west-3
-  api: describeVpcEndpointConnections
-  title: EC2 VPC Endpoint Connections
-  id: ec2-vpc-endpoint-connections
-  jmespath: VpcEndpointConnections
-  headings:
-  - ServiceId
-  - VpcEndpointId
-  - VpcEndpointOwner
-  - VpcEndpointState
-  - CreationTimestamp
-- service: EC2
-  api: describeVpcEndpoints
-  title: EC2 VPC Endpoints
-  id: ec2-vpc-endpoints
-  jmespath: VpcEndpoints
-  headings:
-  - VpcEndpointId
-  - VpcEndpointType
-  - VpcId
-  - ServiceName
-  - State
-  - CreationTimestamp
-- service: EC2
-  skip_regions:
-  - eu-west-3
-  api: describeVpcEndpointServiceConfigurations
-  title: EC2 VPC Endpoint Service Configurations
-  id: ec2-vpc-endpoint-service-configs
-  jmespath: ServiceConfigurations
-  headings:
-  - ServiceId
-  - ServiceName
-  - ServiceState
-  - AcceptanceRequired
-  - PrivateDnsName
+# - service: EC2
+#   skip_regions:
+#   - ap-northeast-1
+#   - ap-northeast-2
+#   - ap-south-1
+#   - ca-central-1
+#   - us-east-2
+#   - eu-west-2
+#   - eu-west-3
+#   - eu-central-1
+#   api: describeVpcClassicLinkDnsSupport
+#   title: EC2 VPC ClassicLink DNS Support
+#   id: ec2-vpc-classiclink-dns-support
+#   jmespath: Vpcs
+#   headings:
+#   - VpcId
+#   - ClassicLinkDnsSupported
+# - service: EC2
+#   skip_regions:
+#   - eu-west-3
+#   api: describeVpcEndpointConnectionNotifications
+#   title: EC2 VPC Endpoint Connection Notifications
+#   id: ec2-vpc-endpoint-connection-notifications
+#   jmespath: ConnectionNotificationSet
+#   headings:
+#   - ConnectionNotificationId
+#   - ServiceId
+#   - VpcEndpointId
+#   - ConnectionNotificationArn
+#   - ConnectionEvents
+#   - ConnectionNotificationState
+# - service: EC2
+#   skip_regions:
+#   - eu-west-3
+#   api: describeVpcEndpointConnections
+#   title: EC2 VPC Endpoint Connections
+#   id: ec2-vpc-endpoint-connections
+#   jmespath: VpcEndpointConnections
+#   headings:
+#   - ServiceId
+#   - VpcEndpointId
+#   - VpcEndpointOwner
+#   - VpcEndpointState
+#   - CreationTimestamp
+# - service: EC2
+#   api: describeVpcEndpoints
+#   title: EC2 VPC Endpoints
+#   id: ec2-vpc-endpoints
+#   jmespath: VpcEndpoints
+#   headings:
+#   - VpcEndpointId
+#   - VpcEndpointType
+#   - VpcId
+#   - ServiceName
+#   - State
+#   - CreationTimestamp
+# - service: EC2
+#   skip_regions:
+#   - eu-west-3
+#   api: describeVpcEndpointServiceConfigurations
+#   title: EC2 VPC Endpoint Service Configurations
+#   id: ec2-vpc-endpoint-service-configs
+#   jmespath: ServiceConfigurations
+#   headings:
+#   - ServiceId
+#   - ServiceName
+#   - ServiceState
+#   - AcceptanceRequired
+#   - PrivateDnsName
 - service: EC2
   api: describeVpcPeeringConnections
   title: EC2 VPC Peering Connections
@@ -1342,50 +1342,50 @@ services:
   headings:
   - CacheParameterGroupName
   - CacheParameterGroupFamily
-  - Description
-- service: ElastiCache
-  skip_regions:
-  - ap-south-1
-  - ap-northeast-2
-  - eu-central-1
-  - eu-west-3
-  - ap-southeast-2
-  - ca-central-1
-  - us-east-2
-  - eu-west-2
-  api: describeCacheSecurityGroups
-  title: ElastiCache Security Groups
-  id: elasticache-security-groups
-  jmespath: CacheSecurityGroups
-  headings:
-  - OwnerId
-  - CacheSecurityGroupName
-  - Description
-  - EC2SecurityGroups[].Status
-  - EC2SecurityGroups[].EC2SecurityGroupName
-- service: ElastiCache
-  api: describeCacheSubnetGroups
-  title: ElastiCache Subnet Groups
-  id: elasticache-subnet-groups
-  jmespath: CacheSubnetGroups
-  headings:
-  - CacheSubnetGroupName
-  - CacheSubnetGroupDescription
-  - VpcId
-  - Subnets[].SubnetIdentifier
-- service: ElastiCache
-  api: describeReplicationGroups
-  title: ElastiCache Replication Groups
-  id: elasticache-replication-groups
-  jmespath: ReplicationGroups
-  headings:
-  - ReplicationGroupId
-  - Description
-  - Status
-  - MemberClusters[]
-  - AutomaticFailover
-  - ClusterEnabled
-  - CacheNodeType
+#   - Description
+# - service: ElastiCache
+#   skip_regions:
+#   - ap-south-1
+#   - ap-northeast-2
+#   - eu-central-1
+#   - eu-west-3
+#   - ap-southeast-2
+#   - ca-central-1
+#   - us-east-2
+#   - eu-west-2
+#   api: describeCacheSecurityGroups
+#   title: ElastiCache Security Groups
+#   id: elasticache-security-groups
+#   jmespath: CacheSecurityGroups
+#   headings:
+#   - OwnerId
+#   - CacheSecurityGroupName
+#   - Description
+#   - EC2SecurityGroups[].Status
+#   - EC2SecurityGroups[].EC2SecurityGroupName
+# - service: ElastiCache
+#   api: describeCacheSubnetGroups
+#   title: ElastiCache Subnet Groups
+#   id: elasticache-subnet-groups
+#   jmespath: CacheSubnetGroups
+#   headings:
+#   - CacheSubnetGroupName
+#   - CacheSubnetGroupDescription
+#   - VpcId
+#   - Subnets[].SubnetIdentifier
+# - service: ElastiCache
+#   api: describeReplicationGroups
+#   title: ElastiCache Replication Groups
+#   id: elasticache-replication-groups
+#   jmespath: ReplicationGroups
+#   headings:
+#   - ReplicationGroupId
+#   - Description
+#   - Status
+#   - MemberClusters[]
+#   - AutomaticFailover
+#   - ClusterEnabled
+#   - CacheNodeType
 - service: ElastiCache
   api: describeReservedCacheNodes
   title: ElastiCache Reserved Cache Nodes
@@ -1419,44 +1419,44 @@ services:
   - Engine
   - EngineVersion
   - NumCacheNodes
-- service: ElasticBeanstalk
-  api: describeApplications
-  title: ElasticBeanstalk Applications
-  id: elasticbeanstalk-applications
-  jmespath: Applications
-  headings:
-  - ApplicationName
-  - DateCreated
-  - Description
-- service: ElasticBeanstalk
-  api: describeApplicationVersions
-  title: ElasticBeanstalk Application Versions
-  id: elasticbeanstalk-application-versions
-  jmespath: ApplicationVersions
-  headings:
-  - ApplicationName
-  - DateCreated
-  - DateUpdated
-  - Description
-  - VersionLabel
-  - SourceBundle.S3Bucket
-  - SourceBundle.S3Key
-- service: ElasticBeanstalk
-  api: describeEnvironments
-  title: ElasticBeanstalk Environments
-  id: elasticbeanstalk-environments
-  jmespath: Environments
-  headings:
-  - EnvironmentName
-  - EnvironmentId
-  - ApplicationName
-  - VersionLabel
-  - SolutionStackName
-  - Description
-  - DateCreated
-  - Status
-  - Health
-  - HealthStatus
+# - service: ElasticBeanstalk
+#   api: describeApplications
+#   title: ElasticBeanstalk Applications
+#   id: elasticbeanstalk-applications
+#   jmespath: Applications
+#   headings:
+#   - ApplicationName
+#   - DateCreated
+#   - Description
+# - service: ElasticBeanstalk
+#   api: describeApplicationVersions
+#   title: ElasticBeanstalk Application Versions
+#   id: elasticbeanstalk-application-versions
+#   jmespath: ApplicationVersions
+#   headings:
+#   - ApplicationName
+#   - DateCreated
+#   - DateUpdated
+#   - Description
+#   - VersionLabel
+#   - SourceBundle.S3Bucket
+#   - SourceBundle.S3Key
+# - service: ElasticBeanstalk
+#   api: describeEnvironments
+#   title: ElasticBeanstalk Environments
+#   id: elasticbeanstalk-environments
+#   jmespath: Environments
+#   headings:
+#   - EnvironmentName
+#   - EnvironmentId
+#   - ApplicationName
+#   - VersionLabel
+#   - SolutionStackName
+#   - Description
+#   - DateCreated
+#   - Status
+#   - Health
+#   - HealthStatus
 - service: ELB
   api: describeAccountLimits
   title: Classic ELB Account Limits
@@ -1898,116 +1898,116 @@ services:
   - MemorySize
   - LastModified
   - Version
-- service: MachineLearning
-  skip_regions:
-  - ap-northeast-1
-  - ap-northeast-2
-  - ap-south-1
-  - ap-southeast-1
-  - ap-southeast-2
-  - ca-central-1
-  - eu-central-1
-  - eu-west-2
-  - eu-west-3
-  - sa-east-1
-  - us-east-2
-  - us-west-1
-  - us-west-2
-  api: describeBatchPredictions
-  title: Machine Learning Batch Predictions
-  id: ml-batch-predictions
-  jmespath: Results
-  headings:
-  - BatchPredictionId
-  - MLModelId
-  - BatchPredictionDataSourceId
-  - InputDataLocationS3
-  - CreatedByIamUser
-  - CreatedAt
-  - Name
-  - Status
-  - Message
-- service: MachineLearning
-  skip_regions:
-  - ap-northeast-1
-  - ap-northeast-2
-  - ap-south-1
-  - ap-southeast-1
-  - ap-southeast-2
-  - ca-central-1
-  - eu-central-1
-  - eu-west-2
-  - eu-west-3
-  - sa-east-1
-  - us-east-2
-  - us-west-1
-  - us-west-2
-  api: describeEvaluations
-  title: Machine Learning Evaluations
-  id: ml-evaluations
-  jmespath: Results
-  headings:
-  - EvaluationId
-  - MLModelId
-  - EvaluationDataSourceId
-  - CreatedAt
-  - Name
-- service: MachineLearning
-  skip_regions:
-  - ap-northeast-1
-  - ap-northeast-2
-  - ap-south-1
-  - ap-southeast-1
-  - ap-southeast-2
-  - ca-central-1
-  - eu-central-1
-  - eu-west-2
-  - eu-west-3
-  - sa-east-1
-  - us-east-2
-  - us-west-1
-  - us-west-2
-  api: describeDataSources
-  title: Machine Learning Data Sources
-  id: ml-data-sources
-  jmespath: Results
-  headings:
-  - DataSourceId
-  - DataLocationS3
-  - CreatedByIamUser
-  - CreatedAt
-  - DataSizeInBytes
-  - Name
-  - Status
-- service: MachineLearning
-  skip_regions:
-  - ap-northeast-1
-  - ap-northeast-2
-  - ap-south-1
-  - ap-southeast-1
-  - ap-southeast-2
-  - ca-central-1
-  - eu-central-1
-  - eu-west-2
-  - eu-west-3
-  - sa-east-1
-  - us-east-2
-  - us-west-1
-  - us-west-2
-  api: describeMLModels
-  title: Machine Learning Models
-  id: ml-models
-  jmespath: Results
-  headings:
-  - MLModelId
-  - TrainingDataSourceId
-  - CreatedByIamUser
-  - CreatedAt
-  - Name
-  - Status
-  - SizeInBytes
-  - MLModelType
-  - Message
+# - service: MachineLearning
+#   skip_regions:
+#   - ap-northeast-1
+#   - ap-northeast-2
+#   - ap-south-1
+#   - ap-southeast-1
+#   - ap-southeast-2
+#   - ca-central-1
+#   - eu-central-1
+#   - eu-west-2
+#   - eu-west-3
+#   - sa-east-1
+#   - us-east-2
+#   - us-west-1
+#   - us-west-2
+#   api: describeBatchPredictions
+#   title: Machine Learning Batch Predictions
+#   id: ml-batch-predictions
+#   jmespath: Results
+#   headings:
+#   - BatchPredictionId
+#   - MLModelId
+#   - BatchPredictionDataSourceId
+#   - InputDataLocationS3
+#   - CreatedByIamUser
+#   - CreatedAt
+#   - Name
+#   - Status
+#   - Message
+# - service: MachineLearning
+#   skip_regions:
+#   - ap-northeast-1
+#   - ap-northeast-2
+#   - ap-south-1
+#   - ap-southeast-1
+#   - ap-southeast-2
+#   - ca-central-1
+#   - eu-central-1
+#   - eu-west-2
+#   - eu-west-3
+#   - sa-east-1
+#   - us-east-2
+#   - us-west-1
+#   - us-west-2
+#   api: describeEvaluations
+#   title: Machine Learning Evaluations
+#   id: ml-evaluations
+#   jmespath: Results
+#   headings:
+#   - EvaluationId
+#   - MLModelId
+#   - EvaluationDataSourceId
+#   - CreatedAt
+#   - Name
+# - service: MachineLearning
+#   skip_regions:
+#   - ap-northeast-1
+#   - ap-northeast-2
+#   - ap-south-1
+#   - ap-southeast-1
+#   - ap-southeast-2
+#   - ca-central-1
+#   - eu-central-1
+#   - eu-west-2
+#   - eu-west-3
+#   - sa-east-1
+#   - us-east-2
+#   - us-west-1
+#   - us-west-2
+#   api: describeDataSources
+#   title: Machine Learning Data Sources
+#   id: ml-data-sources
+#   jmespath: Results
+#   headings:
+#   - DataSourceId
+#   - DataLocationS3
+#   - CreatedByIamUser
+#   - CreatedAt
+#   - DataSizeInBytes
+#   - Name
+#   - Status
+# - service: MachineLearning
+#   skip_regions:
+#   - ap-northeast-1
+#   - ap-northeast-2
+#   - ap-south-1
+#   - ap-southeast-1
+#   - ap-southeast-2
+#   - ca-central-1
+#   - eu-central-1
+#   - eu-west-2
+#   - eu-west-3
+#   - sa-east-1
+#   - us-east-2
+#   - us-west-1
+#   - us-west-2
+#   api: describeMLModels
+#   title: Machine Learning Models
+#   id: ml-models
+#   jmespath: Results
+#   headings:
+#   - MLModelId
+#   - TrainingDataSourceId
+#   - CreatedByIamUser
+#   - CreatedAt
+#   - Name
+#   - Status
+#   - SizeInBytes
+#   - MLModelType
+#   - Message
 # - service: OpsWorks
 #   api: describeStacks
 #   title: OpsWorks Stacks
@@ -2029,15 +2029,15 @@ services:
 #   - Name
 #   - Attributes.Size
   # - Attributes.LanguageCode
-- service: RDS
-  api: describeAccountAttributes
-  title: RDS Account Attributes
-  id: rds-account-attributes
-  jmespath: AccountQuotas
-  headings:
-  - AccountQuotaName
-  - Used
-  - Max
+# - service: RDS
+#   api: describeAccountAttributes
+#   title: RDS Account Attributes
+#   id: rds-account-attributes
+#   jmespath: AccountQuotas
+#   headings:
+#   - AccountQuotaName
+#   - Used
+#   - Max
 - service: RDS
   api: describeCertificates
   title: RDS Certificates
@@ -2049,16 +2049,16 @@ services:
   - Thumbprint
   - ValidFrom
   - ValidTill
-  - CertificateArn
-- service: RDS
-  api: describeDBClusterParameterGroups
-  title: RDS DB Cluster Parameter Groups
-  id: rds-cluster-parameter-groups
-  jmespath: DBClusterParameterGroups
-  headings:
-  - DBClusterParameterGroupName
-  - DBParameterGroupFamily
-  - Description
+#   - CertificateArn
+# - service: RDS
+#   api: describeDBClusterParameterGroups
+#   title: RDS DB Cluster Parameter Groups
+#   id: rds-cluster-parameter-groups
+#   jmespath: DBClusterParameterGroups
+#   headings:
+#   - DBClusterParameterGroupName
+#   - DBParameterGroupFamily
+#   - Description
 - service: RDS
   api: describeDBClusters
   title: RDS DB Clusters
@@ -2093,26 +2093,26 @@ services:
   - MultiAZ
   - LicenseModel
   - StorageType
-- service: RDS
-  api: describeDBParameterGroups
-  title: RDS DB Parameter Groups
-  id: rds-db-parameter-groups
-  jmespath: DBParameterGroups
-  headings:
-  - DBParameterGroupName
-  - DBParameterGroupFamily
-  - Description
-  - DBParameterGroupArn
-- service: RDS
-  api: describeDBSecurityGroups
-  title: RDS DB Security Groups
-  id: rds-db-security-groups
-  jmespath: DBSecurityGroups
-  headings:
-  - OwnerId
-  - DBSecurityGroupName
-  - DBSecurityGroupDescription
-  - VpcId
+# - service: RDS
+#   api: describeDBParameterGroups
+#   title: RDS DB Parameter Groups
+#   id: rds-db-parameter-groups
+#   jmespath: DBParameterGroups
+#   headings:
+#   - DBParameterGroupName
+#   - DBParameterGroupFamily
+#   - Description
+#   - DBParameterGroupArn
+# - service: RDS
+#   api: describeDBSecurityGroups
+#   title: RDS DB Security Groups
+#   id: rds-db-security-groups
+#   jmespath: DBSecurityGroups
+#   headings:
+#   - OwnerId
+#   - DBSecurityGroupName
+#   - DBSecurityGroupDescription
+#   - VpcId
 - service: RDS
   api: describeDBSnapshots
   title: RDS DB Snapshots
@@ -2128,49 +2128,49 @@ services:
   - AvailabilityZone
   - VpcId
   - EngineVersion
-- service: RDS
-  api: describeDBSubnetGroups
-  title: RDS DB Subnet Groups
-  id: rds-db-subnet-groups
-  jmespath: DBSubnetGroups
-  headings:
-  - DBSubnetGroupName
-  - DBSubnetGroupDescription
-  - VpcId
-  - SubnetGroupStatus
-  - DBSubnetGroupArn
-- service: RDS
-  api: describeEventCategories
-  title: RDS DB Event Categories
-  id: rds-db-event-categories
-  jmespath: EventCategoriesMapList
-  headings:
-  - SourceType
-  - EventCategories[]
-- service: RDS
-  api: describeEventSubscriptions
-  title: RDS DB Event Subscriptions
-  id: rds-db-event-subscriptions
-  jmespath: EventSubscriptionsList
-  headings:
-  - CustomerAwsId
-  - CustSubscriptionId
-  - SnsTopicArn
-  - Status
-  - SubscriptionCreationTime
-  - SourceType
-  - Enabled
-- service: RDS
-  api: describeOptionGroups
-  title: RDS DB Option Groups
-  id: rds-db-option-groups
-  jmespath: OptionGroupsList
-  headings:
-  - OptionGroupName
-  - OptionGroupDescription
-  - EngineName
-  - MajorEngineVersion
-  - VpcId
+# - service: RDS
+#   api: describeDBSubnetGroups
+#   title: RDS DB Subnet Groups
+#   id: rds-db-subnet-groups
+#   jmespath: DBSubnetGroups
+#   headings:
+#   - DBSubnetGroupName
+#   - DBSubnetGroupDescription
+#   - VpcId
+#   - SubnetGroupStatus
+#   - DBSubnetGroupArn
+# - service: RDS
+#   api: describeEventCategories
+#   title: RDS DB Event Categories
+#   id: rds-db-event-categories
+#   jmespath: EventCategoriesMapList
+#   headings:
+#   - SourceType
+#   - EventCategories[]
+# - service: RDS
+#   api: describeEventSubscriptions
+#   title: RDS DB Event Subscriptions
+#   id: rds-db-event-subscriptions
+#   jmespath: EventSubscriptionsList
+#   headings:
+#   - CustomerAwsId
+#   - CustSubscriptionId
+#   - SnsTopicArn
+#   - Status
+#   - SubscriptionCreationTime
+#   - SourceType
+#   - Enabled
+# - service: RDS
+#   api: describeOptionGroups
+#   title: RDS DB Option Groups
+#   id: rds-db-option-groups
+#   jmespath: OptionGroupsList
+#   headings:
+#   - OptionGroupName
+#   - OptionGroupDescription
+#   - EngineName
+#   - MajorEngineVersion
+#   - VpcId
 - service: RDS
   api: describeReservedDBInstances
   title: RDS DB Reserved Instances
@@ -2186,42 +2186,42 @@ services:
   - OfferingType
   - MultiAZ
   - State
-- service: RDS
-  api: describeSourceRegions
-  title: RDS DB Source Regions
-  id: rds-db-source-regions
-  jmespath: SourceRegions
-  headings:
-  - RegionName
-  - Status
-  - Endpoint
-- service: Redshift
-  api: describeClusterParameterGroups
-  title: Redshift Cluster Parameter Groups
-  id: redshift-cluster-parameter-groups
-  jmespath: ParameterGroups
-  headings:
-  - ParameterGroupName
-  - ParameterGroupFamily
-  - Description
-  - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: Redshift
-  api: describeClusters
-  title: Redshift Clusters
-  id: redshift-clusters
-  jmespath: Clusters
-  headings:
-  - ClusterIdentifier
-  - NodeType
-  - ClusterStatus
-  - ModifyStatus
-  - MasterUsername
-  - DBName
-  - ClusterCreateTime
-  - VpcId
-  - ClusterVersion
-  - NumberOfNodes
-  - PubliclyAccessible
+# - service: RDS
+#   api: describeSourceRegions
+#   title: RDS DB Source Regions
+#   id: rds-db-source-regions
+#   jmespath: SourceRegions
+#   headings:
+#   - RegionName
+#   - Status
+#   - Endpoint
+# - service: Redshift
+#   api: describeClusterParameterGroups
+#   title: Redshift Cluster Parameter Groups
+#   id: redshift-cluster-parameter-groups
+#   jmespath: ParameterGroups
+#   headings:
+#   - ParameterGroupName
+#   - ParameterGroupFamily
+#   - Description
+#   - Tag:Name: Tags[?Key=="Name"].Value[]
+# - service: Redshift
+#   api: describeClusters
+#   title: Redshift Clusters
+#   id: redshift-clusters
+#   jmespath: Clusters
+#   headings:
+#   - ClusterIdentifier
+#   - NodeType
+#   - ClusterStatus
+#   - ModifyStatus
+#   - MasterUsername
+#   - DBName
+#   - ClusterCreateTime
+#   - VpcId
+#   - ClusterVersion
+#   - NumberOfNodes
+#   - PubliclyAccessible
 # - service: Redshift
 #   api: describeClusterSecurityGroups
 #   title: Redshift Cluster Security Groups
@@ -2231,123 +2231,123 @@ services:
 #   - ClusterSecurityGroupName
 #   - Description
 #   - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: Redshift
-  api: describeClusterSnapshots
-  title: Redshift Cluster Snapshots
-  id: redshift-cluster-snapshots
-  jmespath: Snapshots
-  headings:
-  - SnapshotIdentifier
-  - ClusterIdentifier
-  - SnapshotCreateTime
-  - Status
-  - AvailabilityZone
-  - ClusterCreateTime
-  - SnapshotType
-  - NodeType
-  - NumberOfNodes
-  - DBName
-  - VpcId
-  - OwnerAccount
-  - SourceRegion
-  - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: Redshift
-  api: describeClusterSubnetGroups
-  title: Redshift Cluster Subnet Groups
-  id: redshift-cluster-subnet-groups
-  jmespath: ClusterSubnetGroups
-  headings:
-  - ClusterSubnetGroupName
-  - Description
-  - VpcId
-  - SubnetGroupStatus
-  - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: Redshift
-  api: describeClusterVersions
-  title: Redshift Cluster Versions
-  id: redshift-cluster-versions
-  jmespath: ClusterVersions
-  headings:
-  - ClusterVersion
-  - ClusterParameterGroupFamily
-  - Description
-- service: Redshift
-  api: describeEventCategories
-  title: Redshift Event Categories
-  id: redshift-event-categories
-  jmespath: EventCategoriesMapList.Events
-  headings:
-  - SourceType
-  - Events[].EventId
-  - Events[].EventDescription
-  - Events[].Severity
-- service: Redshift
-  api: describeEventSubscriptions
-  title: Redshift Event Subscriptions
-  id: redshift-event-subscriptions
-  jmespath: EventSubscriptionsList
-  headings:
-  - CustomerAwsId
-  - CustSubscriptionId
-  - SnsTopicArn
-  - Status
-  - SubscriptionCreationTime
-  - SourceType
-  - Severity
-  - Enabled
-  - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: Redshift
-  api: describeHsmClientCertificates
-  title: Redshift HSM Client Certificates
-  id: redshift-hsm-client-certificates
-  jmespath: HsmClientCertificates
-  headings:
-  - HsmClientCertificateIdentifier
-  - HsmClientCertificatePublicKey
-  - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: Redshift
-  api: describeHsmConfigurations
-  title: Redshift HSM Configurations
-  id: redshift-hsm-configurations
-  jmespath: HsmConfigurations
-  headings:
-  - HsmConfigurationIdentifier
-  - Description
-  - HsmIpAddress
-  - HsmPartitionName
-  - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: Redshift
-  api: describeReservedNodes
-  title: Redshift Reserved Nodes
-  id: redshift-reserved-nodes
-  jmespath: ReservedNodes
-  headings:
-  - ReservedNodeId
-  - ReservedNodeOfferingId
-  - NodeType
-  - StartTime
-  - Duration
-  - NodeCount
-  - State
-  - OfferingType
-- service: Redshift
-  api: describeSnapshotCopyGrants
-  title: Redshift Snapshot Copy Grants
-  id: redshift-snapshot-copy-grants
-  jmespath: SnapshotCopyGrants
-  headings:
-  - SnapshotCopyGrantName
-  - KmsKeyId
-  - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: Redshift
-  api: describeTags
-  title: Redshift Tags
-  id: redshift-tags
-  jmespath: TaggedResources
-  headings:
-  - ResourceName
-  - ResourceType
-  - Tag:Name: Tags[?Key=="Name"].Value[]
+# - service: Redshift
+#   api: describeClusterSnapshots
+#   title: Redshift Cluster Snapshots
+#   id: redshift-cluster-snapshots
+#   jmespath: Snapshots
+#   headings:
+#   - SnapshotIdentifier
+#   - ClusterIdentifier
+#   - SnapshotCreateTime
+#   - Status
+#   - AvailabilityZone
+#   - ClusterCreateTime
+#   - SnapshotType
+#   - NodeType
+#   - NumberOfNodes
+#   - DBName
+#   - VpcId
+#   - OwnerAccount
+#   - SourceRegion
+#   - Tag:Name: Tags[?Key=="Name"].Value[]
+# - service: Redshift
+#   api: describeClusterSubnetGroups
+#   title: Redshift Cluster Subnet Groups
+#   id: redshift-cluster-subnet-groups
+#   jmespath: ClusterSubnetGroups
+#   headings:
+#   - ClusterSubnetGroupName
+#   - Description
+#   - VpcId
+#   - SubnetGroupStatus
+#   - Tag:Name: Tags[?Key=="Name"].Value[]
+# - service: Redshift
+#   api: describeClusterVersions
+#   title: Redshift Cluster Versions
+#   id: redshift-cluster-versions
+#   jmespath: ClusterVersions
+#   headings:
+#   - ClusterVersion
+#   - ClusterParameterGroupFamily
+#   - Description
+# - service: Redshift
+#   api: describeEventCategories
+#   title: Redshift Event Categories
+#   id: redshift-event-categories
+#   jmespath: EventCategoriesMapList.Events
+#   headings:
+#   - SourceType
+#   - Events[].EventId
+#   - Events[].EventDescription
+#   - Events[].Severity
+# - service: Redshift
+#   api: describeEventSubscriptions
+#   title: Redshift Event Subscriptions
+#   id: redshift-event-subscriptions
+#   jmespath: EventSubscriptionsList
+#   headings:
+#   - CustomerAwsId
+#   - CustSubscriptionId
+#   - SnsTopicArn
+#   - Status
+#   - SubscriptionCreationTime
+#   - SourceType
+#   - Severity
+#   - Enabled
+#   - Tag:Name: Tags[?Key=="Name"].Value[]
+# - service: Redshift
+#   api: describeHsmClientCertificates
+#   title: Redshift HSM Client Certificates
+#   id: redshift-hsm-client-certificates
+#   jmespath: HsmClientCertificates
+#   headings:
+#   - HsmClientCertificateIdentifier
+#   - HsmClientCertificatePublicKey
+#   - Tag:Name: Tags[?Key=="Name"].Value[]
+# - service: Redshift
+#   api: describeHsmConfigurations
+#   title: Redshift HSM Configurations
+#   id: redshift-hsm-configurations
+#   jmespath: HsmConfigurations
+#   headings:
+#   - HsmConfigurationIdentifier
+#   - Description
+#   - HsmIpAddress
+#   - HsmPartitionName
+#   - Tag:Name: Tags[?Key=="Name"].Value[]
+# - service: Redshift
+#   api: describeReservedNodes
+#   title: Redshift Reserved Nodes
+#   id: redshift-reserved-nodes
+#   jmespath: ReservedNodes
+#   headings:
+#   - ReservedNodeId
+#   - ReservedNodeOfferingId
+#   - NodeType
+#   - StartTime
+#   - Duration
+#   - NodeCount
+#   - State
+#   - OfferingType
+# - service: Redshift
+#   api: describeSnapshotCopyGrants
+#   title: Redshift Snapshot Copy Grants
+#   id: redshift-snapshot-copy-grants
+#   jmespath: SnapshotCopyGrants
+#   headings:
+#   - SnapshotCopyGrantName
+#   - KmsKeyId
+#   - Tag:Name: Tags[?Key=="Name"].Value[]
+# - service: Redshift
+#   api: describeTags
+#   title: Redshift Tags
+#   id: redshift-tags
+#   jmespath: TaggedResources
+#   headings:
+#   - ResourceName
+#   - ResourceType
+#   - Tag:Name: Tags[?Key=="Name"].Value[]
 # - service: Rekognition
 #   api: listCollections
 #   title: Rekognition
@@ -2357,27 +2357,27 @@ services:
 #   - ResourceName
 #   - ResourceType
 #   - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: Route53
-  region: global
-  api: listHealthChecks
-  title: Route53 Health Checks
-  id: route53-health-checks
-  jmespath: HealthChecks
-  headings:
-  - Id
-  - CallerReference
-  - LinkedService.ServicePrincipal
-  - LinkedService.Description
-  - HealthCheckConfig.Type
-  - HealthCheckConfig.IPAddress
-  - HealthCheckConfig.Port
-  - HealthCheckConfig.ResourcePath
-  - HealthCheckConfig.FullyQualifiedDomainName
-  - HealthCheckConfig.SearchString
-  - HealthCheckConfig.RequestInterval
-  - HealthCheckConfig.Inverted
-  - HealthCheckConfig.Regions[]
-  - HealthCheckVersion
+# - service: Route53
+#   region: global
+#   api: listHealthChecks
+#   title: Route53 Health Checks
+#   id: route53-health-checks
+#   jmespath: HealthChecks
+#   headings:
+#   - Id
+#   - CallerReference
+#   - LinkedService.ServicePrincipal
+#   - LinkedService.Description
+#   - HealthCheckConfig.Type
+#   - HealthCheckConfig.IPAddress
+#   - HealthCheckConfig.Port
+#   - HealthCheckConfig.ResourcePath
+#   - HealthCheckConfig.FullyQualifiedDomainName
+#   - HealthCheckConfig.SearchString
+#   - HealthCheckConfig.RequestInterval
+#   - HealthCheckConfig.Inverted
+#   - HealthCheckConfig.Regions[]
+#   - HealthCheckVersion
 - service: Route53
   region: global
   api: listHostedZones
@@ -2391,16 +2391,16 @@ services:
   - Config.PrivateZone
   - LinkedService.ServicePrincipal
   - LinkedService.Description
-- service: Route53
-  region: global
-  api: listQueryLoggingConfigs
-  title: Route53 Query Logging Configs
-  id: route53-query-logging-configs
-  jmespath: QueryLoggingConfigs
-  headings:
-  - Id
-  - HostedZoneId
-  - CloudWatchLogsLogGroupArn
+# - service: Route53
+#   region: global
+#   api: listQueryLoggingConfigs
+#   title: Route53 Query Logging Configs
+#   id: route53-query-logging-configs
+#   jmespath: QueryLoggingConfigs
+#   headings:
+#   - Id
+#   - HostedZoneId
+#   - CloudWatchLogsLogGroupArn
 - service: Route53
   region: global
   api: listReusableDelegationSets
@@ -2411,36 +2411,36 @@ services:
   - Id
   - CallerReference
   - NameServers[]
-- service: Route53
-  region: global
-  api: listTrafficPolicies
-  title: Route53 Traffic Policies
-  id: route53-traffic-policies
-  jmespath: TrafficPolicySummaries
-  headings:
-  - Id
-  - Name
-  - Type
-  - LatestVersion
-  - TrafficPolicyCount
-- service: Route53
-  region: global
-  api: listTrafficPolicyInstances
-  title: Route53 Traffic Policy Instances
-  id: route53-traffic-policy-instances
-  jmespath: TrafficPolicyInstances
-  headings:
-  - Id
-  - HostedZoneId
-  - Name
-  - TTL
-  - State
-  - Message
-  - TrafficPolicyId
-  - TrafficPolicyVersion
-  - TrafficPolicyType
-  only_regions:
-  - us-east-1
+# - service: Route53
+#   region: global
+#   api: listTrafficPolicies
+#   title: Route53 Traffic Policies
+#   id: route53-traffic-policies
+#   jmespath: TrafficPolicySummaries
+#   headings:
+#   - Id
+#   - Name
+#   - Type
+#   - LatestVersion
+#   - TrafficPolicyCount
+# - service: Route53
+#   region: global
+#   api: listTrafficPolicyInstances
+#   title: Route53 Traffic Policy Instances
+#   id: route53-traffic-policy-instances
+#   jmespath: TrafficPolicyInstances
+#   headings:
+#   - Id
+#   - HostedZoneId
+#   - Name
+#   - TTL
+#   - State
+#   - Message
+#   - TrafficPolicyId
+#   - TrafficPolicyVersion
+#   - TrafficPolicyType
+#   only_regions:
+#   - us-east-1
 - service: Route53Domains
   region: us-east-1
   api: listDomains
@@ -2550,32 +2550,32 @@ services:
   jmespath: ConfigurationSets
   headings:
   - Name
-- service: SES
-  skip_regions:
-  - eu-west-2
-  - eu-west-3
-  - ap-southeast-2
-  - us-west-1
-  - ap-south-1
-  - ap-southeast-1
-  - us-east-2
-  - eu-central-1
-  - ap-northeast-1
-  - ca-central-1
-  - ap-northeast-2
-  - sa-east-1
-  api: listCustomVerificationEmailTemplates
-  params:
-    MaxResults: 50
-  title: Simple Email Service (SES) Custom Vertification Email Templates
-  id: ses-custom-verification-email-templates
-  jmespath: CustomVerificationEmailTemplates
-  headings:
-  - TemplateName
-  - FromEmailAddress
-  - TemplateSubject
-  - SuccessRedirectionURL
-  - FailureRedirectionURL
+# - service: SES
+#   skip_regions:
+#   - eu-west-2
+#   - eu-west-3
+#   - ap-southeast-2
+#   - us-west-1
+#   - ap-south-1
+#   - ap-southeast-1
+#   - us-east-2
+#   - eu-central-1
+#   - ap-northeast-1
+#   - ca-central-1
+#   - ap-northeast-2
+#   - sa-east-1
+#   api: listCustomVerificationEmailTemplates
+#   params:
+#     MaxResults: 50
+#   title: Simple Email Service (SES) Custom Vertification Email Templates
+#   id: ses-custom-verification-email-templates
+#   jmespath: CustomVerificationEmailTemplates
+#   headings:
+#   - TemplateName
+#   - FromEmailAddress
+#   - TemplateSubject
+#   - SuccessRedirectionURL
+  # - FailureRedirectionURL
 - service: SES
   skip_regions:
   - eu-west-2
@@ -2596,49 +2596,49 @@ services:
   jmespath: map(&{Identity:@}, Identities)
   headings:
   - Identity
-- service: SES
-  skip_regions:
-  - eu-west-2
-  - eu-west-3
-  - ap-southeast-2
-  - us-west-1
-  - ap-south-1
-  - ap-southeast-1
-  - us-east-2
-  - eu-central-1
-  - ap-northeast-1
-  - ca-central-1
-  - ap-northeast-2
-  - sa-east-1
-  api: listReceiptFilters
-  title: Simple Email Service (SES) Receipt Filters
-  id: ses-receipt-filters
-  jmespath: Filters
-  headings:
-  - Name
-  - IpFilter.Policy
-  - IpFilter.Cidr
-- service: SES
-  skip_regions:
-  - eu-west-2
-  - eu-west-3
-  - ap-southeast-2
-  - us-west-1
-  - ap-south-1
-  - ap-southeast-1
-  - us-east-2
-  - eu-central-1
-  - ap-northeast-1
-  - ca-central-1
-  - ap-northeast-2
-  - sa-east-1
-  api: listReceiptRuleSets
-  title: Simple Email Service (SES) Receipt Rule Sets
-  id: ses-receipt-rule-sets
-  jmespath: RuleSets
-  headings:
-  - Name
-  - CreatedTimestamp
+# - service: SES
+#   skip_regions:
+#   - eu-west-2
+#   - eu-west-3
+#   - ap-southeast-2
+#   - us-west-1
+#   - ap-south-1
+#   - ap-southeast-1
+#   - us-east-2
+#   - eu-central-1
+#   - ap-northeast-1
+#   - ca-central-1
+#   - ap-northeast-2
+#   - sa-east-1
+#   api: listReceiptFilters
+#   title: Simple Email Service (SES) Receipt Filters
+#   id: ses-receipt-filters
+#   jmespath: Filters
+#   headings:
+#   - Name
+#   - IpFilter.Policy
+#   - IpFilter.Cidr
+# - service: SES
+#   skip_regions:
+#   - eu-west-2
+#   - eu-west-3
+#   - ap-southeast-2
+#   - us-west-1
+#   - ap-south-1
+#   - ap-southeast-1
+#   - us-east-2
+#   - eu-central-1
+#   - ap-northeast-1
+#   - ca-central-1
+#   - ap-northeast-2
+#   - sa-east-1
+#   api: listReceiptRuleSets
+#   title: Simple Email Service (SES) Receipt Rule Sets
+#   id: ses-receipt-rule-sets
+#   jmespath: RuleSets
+#   headings:
+#   - Name
+#   - CreatedTimestamp
 - service: SES
   skip_regions:
   - eu-west-2
@@ -2660,26 +2660,26 @@ services:
   headings:
   - Name
   - CreatedTimestamp
-- service: SES
-  skip_regions:
-  - eu-west-2
-  - eu-west-3
-  - ap-southeast-2
-  - us-west-1
-  - ap-south-1
-  - ap-southeast-1
-  - us-east-2
-  - eu-central-1
-  - ap-northeast-1
-  - ca-central-1
-  - ap-northeast-2
-  - sa-east-1
-  api: listVerifiedEmailAddresses
-  title: Simple Email Service (SES) Verified Email Addresses
-  id: ses-verified-email-addresses
-  jmespath: 'map(&{Address: @}, VerifiedEmailAddresses)'
-  headings:
-  - Address
+# - service: SES
+#   skip_regions:
+#   - eu-west-2
+#   - eu-west-3
+#   - ap-southeast-2
+#   - us-west-1
+#   - ap-south-1
+#   - ap-southeast-1
+#   - us-east-2
+#   - eu-central-1
+#   - ap-northeast-1
+#   - ca-central-1
+#   - ap-northeast-2
+#   - sa-east-1
+  # api: listVerifiedEmailAddresses
+  # title: Simple Email Service (SES) Verified Email Addresses
+  # id: ses-verified-email-addresses
+  # jmespath: 'map(&{Address: @}, VerifiedEmailAddresses)'
+  # headings:
+  # - Address
 - service: SNS
   api: listPhoneNumbersOptedOut
   title: Simple Notification Service (SNS) Phone Numbers Opted Out
