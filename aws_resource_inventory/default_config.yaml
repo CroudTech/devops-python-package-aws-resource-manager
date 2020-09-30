@@ -2348,15 +2348,15 @@ services:
   - ResourceName
   - ResourceType
   - Tag:Name: Tags[?Key=="Name"].Value[]
-- service: Rekognition
-  api: listCollections
-  title: Rekognition
-  id: rekognition
-  jmespath: ""
-  headings:
-  - ResourceName
-  - ResourceType
-  - Tag:Name: Tags[?Key=="Name"].Value[]
+# - service: Rekognition
+#   api: listCollections
+#   title: Rekognition
+#   id: rekognition
+#   jmespath: ""
+#   headings:
+#   - ResourceName
+#   - ResourceType
+#   - Tag:Name: Tags[?Key=="Name"].Value[]
 - service: Route53
   region: global
   api: listHealthChecks
